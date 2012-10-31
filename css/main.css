@@ -1,0 +1,7 @@
+ul.items {
+  list-style-type: none;
+}
+
+ul > li {
+  background-color: #efefef;
+}
