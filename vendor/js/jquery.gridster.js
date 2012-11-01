@@ -1,4 +1,4 @@
-/*! gridster.js - v0.1.0 - 2012-10-20
+/*! gridster.js - v0.1.0 - 2012-10-31
 * http://gridster.net/
 * Copyright (c) 2012 ducksboard; Licensed MIT */
 
@@ -1013,6 +1013,35 @@
 
         return $widget;
     };
+
+    /**
+      * Ability to change widget dimensions 
+      *
+      * @method resize_widget_dimensions
+      * @param {Array} [options.widget_margins] Margin between widgets.
+      *  The first index for the horizontal margin (left, right) and
+      *  the second for the vertical margin (top, bottom).
+      * @param {Array} [options.widget_base_dimensions] Base widget dimensions
+      *  in pixels. The first index for the width and the second for the
+      *  height.
+      *
+      */
+
+    fn.resize_widget_dimensions = function(options) {
+      var margins, base_dimensions;
+      if (this.options.widget_margins) {
+        margins = options.widget_margins;
+      }
+      else {
+        margins = this.options.widget_margins;
+      }
+      if (this.options.widget_base_dimensions) { 
+        base_dimensions = options.base_dimensions;
+      }
+      else {
+        base_dimensions = this.options.base_dimensions;
+      }
+    }
 
     /**
     * Move down widgets in cells represented by the arguments col, row, size_x,
