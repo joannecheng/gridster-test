@@ -15,6 +15,8 @@ $(function(){
     
     gridster.options.widget_base_dimensions = [baseDimension, baseDimension];
     gridster.generate_grid_and_stylesheet();
+    gridster.get_widgets_from_DOM();
+    gridster.set_dom_grid_height();
   });
 
 });
